@@ -6,43 +6,43 @@ local keymap = vim.api.nvim_set_keymap -- for conciseness
 ----------------------- General Keymaps -------------------
 
 -- use jk to exit insert mode
-keymap("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
+keymap("i", "jk", "<ESC>")
 
 -- clear search highlights
-keymap("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
+keymap("n", "<leader>nh", ":nohl<CR>")
 
 -- Save the current buffer in normal mode
-keymap("n", "<leader>ss", ":w<CR>", { desc = "Quick Save in Normal Mode" })
+keymap("n", "<leader>ss", ":w<CR>")
 
 -- Save the current buffer in visual mode and return to normal mode
-keymap("v", "<leader>ss", "<Esc>:w<CR>", { desc = "Quick Save in Visual Mode" })
+keymap("v", "<leader>ss", "<Esc>:w<CR>")
 
 -- Copy to clipboard
-keymap("v", "<leader>cc", '"+y', { desc = "Copy to clipboard" })
+keymap("v", "<leader>cc", '"+y')
 
 -- highlight under cursor
-keymap("n", "vv", "*", { desc = "Highlight word under cursor" })
+keymap("n", "vv", "*")
 
 -- delete single character without copying into register
 keymap("n", "x", '"_x')
 
 -- increment/decrement numbers
-keymap("n", "<leader>+", "<C-a>", { desc = "Increment number" }) -- increment
-keymap("n", "<leader>-", "<C-x>", { desc = "Decrement number" }) -- decrement
+keymap("n", "<leader>+", "<C-a>")
+keymap("n", "<leader>-", "<C-x>")
 
 -- window management
-keymap("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" }) -- split window vertically
-keymap("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" }) -- split window horizontally
-keymap("n", "<leader>sr", ":vertical resize +5<CR>", { desc = "Increase window width" }) -- increase window width
-keymap("n", "<leader>sl", ":vertical resize -5<CR>", { desc = "Decrease window width" }) -- decrease window width
-keymap("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" }) -- make split windows equal width & height
-keymap("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" }) -- close current split window
+keymap("n", "<leader>sv", "<C-w>v")
+keymap("n", "<leader>sh", "<C-w>s")
+keymap("n", "<leader>sr", ":vertical resize +5<CR>")
+keymap("n", "<leader>sl", ":vertical resize -5<CR>")
+keymap("n", "<leader>se", "<C-w>=")
+keymap("n", "<leader>sx", "<cmd>close<CR>")
 
-keymap("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" }) -- open new tab
-keymap("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" }) -- close current tab
-keymap("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to next tab
-keymap("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
-keymap("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
+keymap("n", "<leader>to", "<cmd>tabnew<CR>")
+keymap("n", "<leader>tx", "<cmd>tabclose<CR>")
+keymap("n", "<leader>tn", "<cmd>tabn<CR>")
+keymap("n", "<leader>tp", "<cmd>tabp<CR>")
+keymap("n", "<leader>tf", "<cmd>tabnew %<CR>")
 
 local opt = vim.opt -- for conciseness
 
