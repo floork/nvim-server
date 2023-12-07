@@ -1,48 +1,48 @@
 -- set leader key to space
 vim.g.mapleader = " "
 
-local keymap = vim.api.nvim_set_keymap -- for conciseness
+local keymap = vim.api.nvim_set_keymap
 
 ----------------------- General Keymaps -------------------
 
 -- use jk to exit insert mode
-keymap("i", "jk", "<ESC>")
+keymap("i", "jk", "<ESC>", {})
 
 -- clear search highlights
-keymap("n", "<leader>nh", ":nohl<CR>")
+keymap("n", "<leader>nh", ":nohl<CR>", {})
 
 -- Save the current buffer in normal mode
-keymap("n", "<leader>ss", ":w<CR>")
+keymap("n", "<leader>ss", ":w<CR>", {})
 
 -- Save the current buffer in visual mode and return to normal mode
-keymap("v", "<leader>ss", "<Esc>:w<CR>")
+keymap("v", "<leader>ss", "<Esc>:w<CR>", {})
 
 -- Copy to clipboard
-keymap("v", "<leader>cc", '"+y')
+keymap("v", "<leader>cc", '"+y', {})
 
 -- highlight under cursor
-keymap("n", "vv", "*")
+keymap("n", "vv", "*", {})
 
 -- delete single character without copying into register
-keymap("n", "x", '"_x')
+keymap("n", "x", '"_x', {})
 
 -- increment/decrement numbers
-keymap("n", "<leader>+", "<C-a>")
-keymap("n", "<leader>-", "<C-x>")
+keymap("n", "<leader>+", "<C-a>", {})
+keymap("n", "<leader>-", "<C-x>", {})
 
 -- window management
-keymap("n", "<leader>sv", "<C-w>v")
-keymap("n", "<leader>sh", "<C-w>s")
-keymap("n", "<leader>sr", ":vertical resize +5<CR>")
-keymap("n", "<leader>sl", ":vertical resize -5<CR>")
-keymap("n", "<leader>se", "<C-w>=")
-keymap("n", "<leader>sx", "<cmd>close<CR>")
+keymap("n", "<leader>sv", "<C-w>v", {})
+keymap("n", "<leader>sh", "<C-w>s", {})
+keymap("n", "<leader>sr", ":vertical resize +5<CR>", {})
+keymap("n", "<leader>sl", ":vertical resize -5<CR>", {})
+keymap("n", "<leader>se", "<C-w>=", {})
+keymap("n", "<leader>sx", "<cmd>close<CR>", {})
 
-keymap("n", "<leader>to", "<cmd>tabnew<CR>")
-keymap("n", "<leader>tx", "<cmd>tabclose<CR>")
-keymap("n", "<leader>tn", "<cmd>tabn<CR>")
-keymap("n", "<leader>tp", "<cmd>tabp<CR>")
-keymap("n", "<leader>tf", "<cmd>tabnew %<CR>")
+keymap("n", "<leader>to", "<cmd>tabnew<CR>", {})
+keymap("n", "<leader>tx", "<cmd>tabclose<CR>", {})
+keymap("n", "<leader>tn", "<cmd>tabn<CR>", {})
+keymap("n", "<leader>tp", "<cmd>tabp<CR>", {})
+keymap("n", "<leader>tf", "<cmd>tabnew %<CR>", {})
 
 local opt = vim.opt -- for conciseness
 
