@@ -44,6 +44,8 @@ keymap("n", "<leader>tn", "<cmd>tabn<CR>", {})
 keymap("n", "<leader>tp", "<cmd>tabp<CR>", {})
 keymap("n", "<leader>tf", "<cmd>tabnew %<CR>", {})
 
+keymap("n", "<leader>fb", "<cmd>Explore<CR>", {})
+
 local opt = vim.opt -- for conciseness
 
 -- line numbers
